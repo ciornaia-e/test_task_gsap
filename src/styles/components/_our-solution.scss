@@ -1,0 +1,119 @@
+.solution-line {
+    position: absolute;
+    top: px-to-rem(-150);
+    left: px-to-rem(-1000);
+}
+
+
+.solution-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: px-to-rem(20);
+}
+
+.solution-card {
+    padding: px-to-rem(28);
+    border-radius: $border-radius-card;
+    background: $cream;
+    color: $dark-gray;
+    opacity: 0;
+    transform: translateX(0);
+    transition: none;
+
+    &:nth-child(odd) {
+        transform: translateX(-100px);
+    }
+
+    &:nth-child(even) {
+        transform: translateX(100px);
+    }
+}
+
+.solution-icon {
+    @extend .xy-flex-center;
+    background: $pink;
+    border-radius: 50%;
+    width: px-to-rem(60);
+    height: px-to-rem(60);
+    margin-bottom: px-to-rem(28);
+    transform: scale(0.05);
+    opacity: 0;
+    transform-origin: center;
+
+    svg {
+        transform: scale(0.05);
+        opacity: 0;
+        transform-origin: center;
+    }
+}
+
+.solution-title {
+    margin-bottom: px-to-rem(8);
+    font-size: px-to-rem(28);
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.solution-text {
+    font-weight: 300;
+    font-size: px-to-rem(18);
+    line-height: 1.4;
+}
+
+.solution-title, .solution-text {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+@media screen and (max-width: 992px) {
+    .solution-cards {
+        grid-template-columns: 1fr;
+        gap: px-to-rem(12);
+    }
+
+    .solution-card {
+        opacity: 1;
+        transform: translateX(0);
+    
+        &:nth-child(odd) {
+            transform: translateX(0);
+        }
+    
+        &:nth-child(even) {
+            transform: translateX(0);
+        }
+    }
+
+    .solution-icon {
+        width: px-to-rem(48);
+        height: px-to-rem(48);
+        margin-bottom: px-to-rem(20);
+        transform: scale(1);
+        opacity: 1;
+    
+        svg {
+            transform: scale(1);
+            opacity: 1;
+            transform-origin: center;
+            transform: scale(0.75) !important;
+        }
+    }
+
+    .solution-title {
+        font-size: px-to-rem(20);
+    }
+
+    .solution-text {
+        font-size: px-to-rem(16);
+    }
+
+    .solution-title, .solution-text {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .solution-line {
+        display: none;
+    }
+}

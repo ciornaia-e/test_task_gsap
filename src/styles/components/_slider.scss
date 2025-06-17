@@ -1,0 +1,43 @@
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .swiper-wrapper {
+        position: relative;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .artists-swiper {
+        width: 100%;
+        overflow: visible;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: block;
+        position: absolute;
+        top: 50%;
+        width: px-to-rem(24);
+        height: px-to-rem(24);
+        transform: translateY(-50%);
+        background: transparent;
+        color: white;
+        cursor: pointer;
+        z-index: 10;
+
+        &::after {
+            font-size: px-to-rem(24);
+        }
+    }
+
+    .swiper-button-prev {
+        left: px-to-rem(-16);
+    }
+      
+      .swiper-button-next {
+        right: px-to-rem(-16);
+    }
+}

@@ -1,0 +1,42 @@
+// Pseudo elment
+.pseudoel {
+  display: block;
+  position: absolute;
+  content: '';
+}
+
+// Centering
+.x-abs-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.y-abs-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.xy-abs-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.x-flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.y-flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.xy-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

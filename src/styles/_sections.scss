@@ -1,0 +1,38 @@
+.section {
+    padding-bottom: px-to-rem(200);
+    position: relative;
+
+    h2 {
+        color: $cream;
+        text-align: center;
+        font-weight: 700;
+        margin: 0 auto px-to-rem(60);
+        font-size: px-to-rem(54);
+        line-height: 1.1;
+        max-width: 900px;
+        overflow: hidden;
+
+        .line {
+            display: inline-block;
+            transform: translateY(40px);
+            opacity: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .section {
+        padding-bottom: px-to-rem(100);
+
+        h2 {
+            margin-bottom: px-to-rem(28);
+            font-size: px-to-rem(28);
+            max-width: px-to-rem(600);
+
+            .line {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+}
